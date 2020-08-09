@@ -1,6 +1,7 @@
-dictionary = ["aa", "abab", "aac", "ba", "bac", "baba", "cac", "caac"]
-word = input()
-if word in dictionary:
-    print("Correct")
-else:
-    print("Incorrect")
+dictionary = ['all', 'an', 'and', 'as', 'closely', 'correct', 'equivocal',
+              'examine', 'indication', 'is', 'means', 'minutely', 'or', 'scrutinize',
+              'sign', 'the', 'to', 'uncertain']
+
+sentence = input().split()
+incorrect = [word for word in sentence if word not in dictionary]
+print("\n".join(incorrect) if incorrect else "OK")
